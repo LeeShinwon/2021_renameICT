@@ -200,9 +200,12 @@ int main(){
                 element[2]='8';
             }
             
-        if(rename(ent->d_name, element)!=0){
-            printf("%c+1(%s)에서 실패\n\n",element[1],ent->d_name);
-            //return 0;
+        if(element[1]=='1'||element[1]=='2'||element[1]=='3'||element[1]=='4'){
+
+            if(rename(ent->d_name, element)!=0){
+                printf("%c+1(%s)에서 실패\n\n",element[1],ent->d_name);
+                //return 0;
+            }
         }
     }
     closedir (dir);//디렉터리 닫기
